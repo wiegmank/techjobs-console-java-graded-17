@@ -125,7 +125,7 @@ public class TechJobs {
                 for (Map.Entry<String, String> whatIsThisHashMapCalled : someJob.entrySet()) {
                     System.out.println(whatIsThisHashMapCalled.getKey() + ": " + whatIsThisHashMapCalled.getValue());
                 }
-                System.out.println("*****\n");
+                System.out.println("*****");
             }
         } else {
             System.out.println("No Results");
