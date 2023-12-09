@@ -97,10 +97,24 @@ public class JobData {
 
         for (HashMap<String, String> row : allJobs) {
             //for each row in "allJobs"
-            if (row.containsValue(value)) {
-                jobs.add(row);
+
+            //WORKS but case-sensitive
+//            if (row.containsValue(value)) {
+//                jobs.add(row);
+//            }
+
+            // row not value.equalsignorecase//if (value.equalsIgnoreCase(value) {}
+
+            for (Map.Entry<String, String> entry : row.entrySet()) {
+                String columnData = entry.getValue().toLowerCase();
+                if (value.toLowerCase().equals(columnData)) {
+                    jobs.add(row);
+                    break;
+                }
             }
-            //if any cell contains value of "value", add that row (1x only)
+
+
+
             }
 
         return jobs;
