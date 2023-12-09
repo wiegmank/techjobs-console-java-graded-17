@@ -96,15 +96,6 @@ public class JobData {
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
 
         for (HashMap<String, String> row : allJobs) {
-            //for each row in "allJobs"
-
-            //WORKS but case-sensitive
-//            if (row.containsValue(value)) {
-//                jobs.add(row);
-//            }
-
-            // row not value.equalsignorecase//if (value.equalsIgnoreCase(value) {}
-
             for (Map.Entry<String, String> entry : row.entrySet()) {
                 String columnData = entry.getValue().toLowerCase();
                 if (columnData.toLowerCase().contains(value.toLowerCase())) {
@@ -112,10 +103,7 @@ public class JobData {
                     break;
                 }
             }
-
-//
-
-            }
+        }
 
         return jobs;
     }
